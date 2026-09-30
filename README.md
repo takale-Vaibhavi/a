@@ -1,5 +1,4 @@
-# Practical 1: Basics of R Programming
-
+Practical 1: Basics of R Programming
 a <- 10
 b <- 5
 
@@ -19,20 +18,13 @@ print(sub)
 print(mul)
 print(div)
 
-# Practical 2: Implement R Loops
-
-## For Loop
-
-
+Practical 2: Implement R Loops
+For Loop
 for(i in 1:5)
 {
     print(i)
 }
-
-
-## While Loop
-
-```r
+While Loop
 j <- 1
 
 while(j <= 5)
@@ -40,15 +32,8 @@ while(j <= 5)
     print(j)
     j <- j + 1
 }
-```
-
----
-
-# Practical 3: Functions in R
-
-## Example 1: Add Two Numbers
-
-```r
+Practical 3: Functions in R
+Add Two Numbers
 add <- function(a, b)
 {
     result <- a + b
@@ -57,33 +42,21 @@ add <- function(a, b)
 
 sum <- add(10, 20)
 print(sum)
-```
-
-## Example 2: Find Square of a Number
-
-```r
+Square of a Number
 square <- function(x)
 {
     return(x^2)
 }
 
 print(square(5))
-```
-
-## Example 3: Function Without Arguments
-
-```r
+Function Without Arguments
 greet <- function()
 {
     print("Welcome to R Programming")
 }
 
 greet()
-```
-
-## Example 4: Find Maximum of Two Numbers
-
-```r
+Maximum of Two Numbers
 maximum <- function(a, b)
 {
     if(a > b)
@@ -93,98 +66,63 @@ maximum <- function(a, b)
 }
 
 print(maximum(15, 10))
-```
+Practical 4: Data Frames and Probability Distributions
+Data Frame Using cbind()
+student <- data.frame(
+    RollNo = c(1, 2, 3),
+    Name = c("Saloni", "Kartik", "Vipul")
+)
 
----
-
-# Practical 4: Data Frames and Probability Distribution
-
-## A) Data Frames using cbind() and rbind()
-
-```r
 marks <- data.frame(
     Marks = c(85, 90, 99)
 )
 
-print(marks)
-
-# Combine Columns
 result <- cbind(student, marks)
+
 print(result)
-```
-
-### Joining Rows Using rbind()
-
-```r
-# Data Frame 1
+Data Frame Using rbind()
 df1 <- data.frame(
     RollNo = c(1, 2),
     Name = c("Saloni", "Kartik")
 )
 
-# Data Frame 2
 df2 <- data.frame(
     RollNo = c(3, 4),
     Name = c("Vipul", "Sahil")
 )
 
-# Combine Rows
 new_df <- rbind(df1, df2)
+
 print(new_df)
-```
-
-## B) Probability Distributions
-
-### Normal Distribution
-
-```r
+Normal Distribution
 print(dnorm(65, mean = 60, sd = 5))
 print(pnorm(65, mean = 60, sd = 5))
 print(qnorm(0.96, mean = 60, sd = 5))
 
 set.seed(100)
 print(rnorm(5, mean = 60, sd = 5))
-```
-
-### Poisson Distribution
-
-```r
+Poisson Distribution
 print(dpois(7, lambda = 8))
 print(ppois(7, lambda = 8))
 print(qpois(0.95, lambda = 8))
 
 set.seed(100)
 print(rpois(5, lambda = 8))
-```
-
-### Uniform Distribution
-
-```r
+Uniform Distribution
 print(dunif(64, min = 1, max = 100))
 print(punif(64, min = 1, max = 100))
 print(qunif(0.95, min = 1, max = 100))
 
 set.seed(100)
 print(runif(6, min = 1, max = 100))
-```
-
-### Exponential Distribution
-
-```r
+Exponential Distribution
 print(dexp(1, rate = 2))
 print(pexp(1, rate = 2))
 print(qexp(0.95, rate = 2))
 
 set.seed(100)
 print(rexp(1, rate = 2))
-```
-
----
-
-# Practical 5: String Manipulation in R
-
-```r
-# Creating a string variable
+Practical 5: String Manipulation in R
 str <- "R Programming Language"
 
 print(nchar(str))
@@ -195,27 +133,12 @@ print(sub("Programming", "Coding", str))
 print(strsplit(str, " "))
 print(identical("R", "R"))
 print(trimws(" R Programming  "))
-```
-
----
-
-# Practical 6: Data Structures in R
-
-## Vector
-
-Stores elements of the same data type.
-
-```r
+Practical 6: Data Structures in R
+Vector
 vector_data <- c(10, 20, 30, 40, 50)
 
 print(vector_data)
-```
-
-## List
-
-Stores elements of different data types.
-
-```r
+List
 list_data <- list(
     Name = "Rahul",
     Age = 22,
@@ -224,13 +147,7 @@ list_data <- list(
 )
 
 print(list_data)
-```
-
-## Data Frame
-
-Stores data in rows and columns.
-
-```r
+Data Frame
 student_data <- data.frame(
     RollNo = c(1, 2, 3),
     Name = c("Saloni", "Sayali", "Kartik"),
@@ -238,31 +155,17 @@ student_data <- data.frame(
 )
 
 print(student_data)
-```
-
-## Accessing Elements
-
-```r
-# Accessing second element of vector
+Accessing Elements
 print(vector_data[2])
-
-# Accessing Name from list
 print(list_data$Name)
-
-# Accessing Marks from data frame
 print(student_data$Marks)
-```
-
----
-
-# Practical 7: Read and Analyze a CSV File in R
-
-```r
+Practical 7: Read and Analyze a CSV File in R
 getwd()
 
 data <- read.csv("prac7.csv")
 
 data
+
 head(data)
 tail(data)
 str(data)
@@ -273,29 +176,23 @@ names(data)
 print(data[, 1])
 
 mean(data$marks)
-```
-
----
-
-# Practical 8: Create Different Graphs using R
-
-## Pie Chart
-
-```r
+Practical 8: Create Different Graphs Using R
+Pie Chart
 students <- c(40, 30, 20, 10)
 
-dept <- c("Science", "Commerce", "Arts", "Management")
+dept <- c(
+    "Science",
+    "Commerce",
+    "Arts",
+    "Management"
+)
 
 pie(
     students,
     labels = dept,
     main = "Student Distribution by Department"
 )
-```
-
-## Bar Chart
-
-```r
+Bar Chart
 barplot(
     students,
     names.arg = dept,
@@ -304,11 +201,7 @@ barplot(
     ylab = "Number of Students",
     col = "lightblue"
 )
-```
-
-## Histogram
-
-```r
+Histogram
 sales <- c(40, 50, 60, 70, 80, 90)
 
 hist(
@@ -317,13 +210,9 @@ hist(
     main = "Histogram",
     xlab = "Marks"
 )
-```
-
-## Scatter Plot
-
-```r
+Scatter Plot
 n <- as.integer(
-    readline(prompt = "Enter the number of data points:")
+    readline(prompt = "Enter the number of data points: ")
 )
 
 x <- numeric(n)
@@ -332,11 +221,11 @@ y <- numeric(n)
 for(i in 1:n)
 {
     x[i] <- as.numeric(
-        readline(prompt = paste("Enter X", i, ":"))
+        readline(prompt = paste("Enter X", i, ": "))
     )
 
     y[i] <- as.numeric(
-        readline(prompt = paste("Enter Y", i, ":"))
+        readline(prompt = paste("Enter Y", i, ": "))
     )
 }
 
@@ -352,53 +241,67 @@ plot(
     pch = 19,
     col = "blue"
 )
-```
-
----
-
-# Practical 9: Statistical Analysis in Excel
-
-Create a dataset and perform statistical analysis using Excel.
-
-### Functions / Topics
-
-- AVERAGE
-- MAX
-- MIN
-- COUNTIF
-- COUNTA
-- Anchoring
-- IF
-- Nested IF
-- LOWER
-- CONCAT
-- UPPER
-- VLOOKUP
-- HLOOKUP
-- INDEX
-- ADDRESS
-
----
-
-# Practical 10: Data Analysis in Excel
-
-## A) Data Management
-
-- Sorting
-- Filtering
-- Delimiters
-- Data Validation
-
-## B) Advanced Data Analysis
-
-- Pivot Tables
-- Pivot Charts
-
----
-
-# Practical 11: Advanced Data Analysis using Pivot Tables and Pivot Charts in R
-
-```r
+Practical 9: Statistical Analysis in Excel
+AVERAGE
+=AVERAGE(D2:D9)
+MAX
+=MAX(D2:D9)
+MIN
+=MIN(D2:D9)
+COUNTIF
+=COUNTIF(D2:D9,">80")
+=COUNTIF(C2:C9,"Science")
+COUNTA
+=COUNTA(B2:B9)
+Anchoring
+=D2*$G$2
+IF
+=IF(D2>=40,"Pass","Fail")
+Nested IF
+=IF(D2>=75,"Distinction",IF(D2>=60,"First Class",IF(D2>=40,"Pass","Fail")))
+LOWER
+=LOWER(B2)
+UPPER
+=UPPER(B2)
+CONCAT
+=CONCAT(B2," - ",C2)
+VLOOKUP
+=VLOOKUP(2,A2:C4,3,FALSE)
+HLOOKUP
+=HLOOKUP(3,A1:D3,3,FALSE)
+INDEX
+=INDEX(D2:D9,3)
+ADDRESS
+=ADDRESS(2,4)
+Practical 10: Data Analysis in Excel
+Sorting
+Data → Sort → Select Column → Smallest to Largest / Largest to Smallest
+Filtering
+Data → Filter → Select Required Value
+Number Filtering
+Marks → Number Filters → Greater Than → 80
+Text to Columns / Delimiters
+Data → Text to Columns → Delimited → Comma → Finish
+Data Validation – Department Dropdown
+Data → Data Validation → Allow: List
+Science,Commerce,Arts,Management
+Data Validation – Marks
+Data → Data Validation
+Allow: Whole Number
+Data: Between
+Minimum: 0
+Maximum: 100
+Pivot Table
+Insert → PivotTable → New Worksheet
+Rows: Department
+Values: Sales
+Pivot Table with Month
+Rows: Department
+Columns: Month
+Values: Sales
+Pivot Chart
+Insert → PivotChart → Select Chart Type → OK
+Practical 11: Advanced Data Analysis Using Pivot Tables and Pivot Charts in R
 salesdata <- data.frame(
     dept = c(
         "Science",
@@ -408,6 +311,7 @@ salesdata <- data.frame(
         "Commerce",
         "Arts"
     ),
+
     month = c(
         "Jan",
         "Jan",
@@ -416,6 +320,7 @@ salesdata <- data.frame(
         "Feb",
         "Feb"
     ),
+
     sales = c(
         5000,
         7000,
@@ -438,12 +343,14 @@ pivot <- stats::aggregate(
 print(pivot)
 
 # Frequency table
-table(salesdata$dept)
+print(table(salesdata$dept))
 
 # Cross-tabulation
-xtabs(
-    sales ~ dept + month,
-    data = salesdata
+print(
+    xtabs(
+        sales ~ dept + month,
+        data = salesdata
+    )
 )
 
 # Bar Plot
@@ -455,30 +362,16 @@ barplot(
     ylab = "Total Sales",
     col = "lightblue"
 )
-```
-
----
-
-# Practical 12: Statistical Tests in R
-
-## T-Test
-
-```r
+Practical 12: Statistical Tests in R
+T-Test
 group1 <- c(85, 90, 88, 92)
+
 group2 <- c(80, 85, 75, 82, 88)
 
 t.test(group1, group2)
-```
-
-## F-Test
-
-```r
+F-Test
 var.test(group1, group2)
-```
-
-## One-Way ANOVA
-
-```r
+One-Way ANOVA
 group <- factor(
     c(
         "A", "A", "A",
@@ -496,11 +389,7 @@ marks <- c(
 anova_result <- aov(marks ~ group)
 
 summary(anova_result)
-```
-
-## Chi-Square Test
-
-```r
+Chi-Square Test
 data_matrix <- matrix(
     c(
         20, 30,
@@ -510,11 +399,7 @@ data_matrix <- matrix(
 )
 
 chisq.test(data_matrix)
-```
-
-## Independence of Attributes
-
-```r
+Independence of Attributes
 mat <- matrix(
     c(
         1, 2, 3,
@@ -531,11 +416,3 @@ is_independent <- q$rank == ncol(mat)
 
 print(q$rank)
 print(is_independent)
-```
-
----
-
-
-**Vaibhavi Takale**
-
-Advanced Data Analytics – Practical Reference
